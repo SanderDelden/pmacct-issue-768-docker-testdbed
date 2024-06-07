@@ -1,0 +1,11 @@
+%YAML 1.1
+---
+services:
+  nfacctd:
+    image: pmacct/nfacctd:bleeding-edge
+    init: true
+    network_mode: host
+    volumes:
+    - $PWD/nfacctd.conf:/etc/pmacct/nfacctd.conf:ro
+    - $PWD/bgp.map:/etc/pmacct/mappings/bgp.map:ro
+    - $PWD/data:/tmp/pmacct/

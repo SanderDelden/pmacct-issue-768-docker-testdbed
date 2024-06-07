@@ -1,0 +1,5 @@
+# Files to ignore
+data/*
+
+# Files to not ignore
+!data/.gitkeep
